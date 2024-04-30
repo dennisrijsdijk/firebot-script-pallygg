@@ -15,7 +15,8 @@ const model: ReplaceVariable = {
         possibleDataOutput: [ "text" ]
     },
     evaluator(trigger: Effects.Trigger): string {
-        return (trigger.metadata.eventData as PallyDonationEventData).username ?? "Anonymous";
+        const username = (trigger.metadata.eventData as PallyDonationEventData).username ?? "";
+        return username.length !== 0 ? username : "Anonymous";
     }
 }
 
