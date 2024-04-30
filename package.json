@@ -1,8 +1,8 @@
 {
-  "name": "firebot-custom-script-starter",
-  "scriptOutputName": "starterScript",
+  "name": "firebot-pally",
+  "scriptOutputName": "firebot-pally",
   "version": "1.0.0",
-  "description": "A starter Firebot custom script",
+  "description": "A Firebot script that provides a donation event for pally.gg",
   "main": "",
   "scripts": {
     "build": "webpack",
