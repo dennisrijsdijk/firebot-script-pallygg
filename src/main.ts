@@ -1,6 +1,7 @@
 import { Firebot, ScriptModules } from "@crowbartools/firebot-custom-scripts-types";
 import { registerEvents } from "./events";
 import websocket from "./websocket";
+import variables from "./variables";
 
 interface Params {
   apiKey: string;
@@ -27,9 +28,8 @@ const script: Firebot.CustomScript<Params> = {
     };
   },
   run: (runRequest) => {
-    const { logger } = runRequest.modules;
-    logger.info(runRequest.parameters.message);
     modules = runRequest.modules;
+    variables.forEach(variable => modules.replaceVariableManager.registerReplaceVariable(variable));
     registerEvents();
     websocket.connect(runRequest.parameters.apiKey);
   },
