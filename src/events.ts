@@ -17,7 +17,8 @@ const eventSource = {
             activityFeed: {
                 icon: "fad fa-hand-holding-usd",
                 getMessage: (eventData: PallyDonationEventData) => {
-                    return `**${eventData.username}** donated **$${eventData.donation.toFixed(2)}** to page **${eventData.pageSlug}**`
+                    const username: string = eventData.username === "" ? "Someone" : eventData.username;
+                    return `**${username}** donated **$${eventData.donation.toFixed(2)}** to page **${eventData.pageSlug}**`
                 }
             }
         }

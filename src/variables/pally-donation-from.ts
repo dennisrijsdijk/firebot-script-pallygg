@@ -10,13 +10,13 @@ const triggers = {
 const model: ReplaceVariable = {
     definition: {
         handle: "pallyDonationFrom",
-        description: "The username of the donator",
+        description: "The username of the donator. 'Someone' when no name is entered.",
         triggers: triggers,
         possibleDataOutput: [ "text" ]
     },
     evaluator(trigger: Effects.Trigger): string {
-        const username = (trigger.metadata.eventData as PallyDonationEventData).username ?? "";
-        return username.length !== 0 ? username : "Anonymous";
+        const username = (trigger.metadata.eventData as PallyDonationEventData).username;
+        return username === "" ? "Someone" : username;
     }
 }
 
