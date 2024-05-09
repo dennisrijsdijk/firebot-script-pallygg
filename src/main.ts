@@ -13,7 +13,7 @@ const script: Firebot.CustomScript<Params> = {
       name: "Pally.gg",
       description: "Pally.gg integration for Firebot",
       author: "DennisOnTheInternet",
-      version: "1.0",
+      version: "1.0.1",
       firebotVersion: "5",
     };
   },
