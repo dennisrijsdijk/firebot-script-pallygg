@@ -29,7 +29,7 @@ Find "Donation (Pally.gg)", enable it and press save.
 The Pally script provides a Donation event, as well as a few variables:
 - $pallyDonationAmount - Donation amount as a number (e.g. 10.5)
 - $pallyDonationAmountFormatted - Donation amount formatted as a string (e.g. $10.50)
-- $pallyDonationFrom - The donator's name, entered on the donation page
+- $pallyDonationFrom - The donator's name, entered on the donation page. 'Someone' when no name is entered
 - $pallyDonationMessage - The message left by the donator
 - $pallyDonationPageSlug - The slug (URL segment) for the page where the donation took place. e.g. for https://pally.gg/p/dennis, the slug is "dennis"
 
